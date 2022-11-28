@@ -140,6 +140,7 @@ def scraper2():
 
 if __name__ == '__main__':
     st.title('SUPERPAGES.COM SCRAPER 🎈')
+    st.caption('Fields to be scraped are: Name, Website, Phone, Address, Reviews, Profile link')
     tab1, tab2 = st.tabs(['Scraping with url ❄️', 'Scraping with parameters 🎉'])
 
     with tab1.form('Scraper with listing url'):
