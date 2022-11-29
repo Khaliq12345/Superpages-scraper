@@ -6,6 +6,16 @@ from time import sleep
 from latest_user_agents import get_random_user_agent
 ua = get_random_user_agent()
 
+st.set_page_config(page_title= 'Superpages.com Scraper', page_icon=":man:")
+hide_menu = """
+<style>
+#MainMenu {
+    visibility:hidden;}
+footer {
+    visibility:hidden;}
+</style>
+"""
+
 def scraper1():
     item_list = []
     url = listing_url
@@ -140,6 +150,7 @@ def scraper2():
 
 if __name__ == '__main__':
     st.title('SUPERPAGES.COM SCRAPER 🎈')
+    st.markdown(hide_menu, unsafe_allow_html=True)
     st.caption('Fields to be scraped are: Name, Website, Phone, Address, Reviews, Profile link')
     tab1, tab2 = st.tabs(['Scraping with url ❄️', 'Scraping with parameters 🎉'])
 
